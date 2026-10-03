@@ -89,6 +89,13 @@ body.editing{padding-right:min(400px,0px)}
 .tl b{font:700 22px/1.2 var(--head);display:block}
 .tl small{display:block;color:var(--mute);font-size:15px}
 .tl p{margin:4px 0 0;font-size:16px}
+#brick{display:block;width:150px;margin-top:24px}
+@media(min-width:1100px){.hero .wrap{position:relative}#brick{position:absolute;right:20px;top:108px;width:160px;margin:0}}
+.b{animation:drop 10s ease-in infinite both;transform-box:fill-box}
+@keyframes drop{0%{opacity:0;transform:translateY(-60px)}6%{opacity:1;transform:none}86%{opacity:1}94%,100%{opacity:0}}
+.sm{animation:puff 3s ease-out infinite both}
+@keyframes puff{0%{opacity:.9;transform:translateY(0) scale(.5)}100%{opacity:0;transform:translateY(-26px) scale(1.4)}}
+@media(prefers-reduced-motion:reduce){.b,.sm{animation:none}}
 /* lightbox */
 #lb{position:fixed;inset:0;background:rgba(6,18,32,.94);z-index:50;display:none;flex-direction:column}
 #lb.open{display:flex}
@@ -116,6 +123,7 @@ body.editing{padding-right:min(400px,0px)}
   <h1 id="heroName"></h1>
   <p class="lead" id="heroLead"></p>
   <div class="tb" id="titleBlock" aria-label="Summary"></div>
+  <svg id="brick" viewBox="0 0 220 190" aria-hidden="true"></svg>
   <div class="btns"><a class="btn" href="#works">View drawings</a><a class="btn alt" href="#contact">Get in touch</a></div>
 </div></header>
 
@@ -238,6 +246,25 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft') show(cur - 1);
   if (e.key === 'ArrowRight') show(cur + 1);
 });
+
+/* ---- little brick house animation ---- */
+(function () {
+  let h = '<line x1="8" y1="174" x2="212" y2="174" stroke="#14304f" stroke-width="3" stroke-linecap="round"/>', n = 0, t = i => `style="animation-delay:${(i * .07).toFixed(2)}s"`;
+  h += '<rect x="148" y="36" width="16" height="32" fill="#a3432f" stroke="#14304f" stroke-width="2"/>';
+  for (let r = 0; r < 8; r++) {
+    const y = 162 - r * 12, off = r % 2 ? -10 : 0;
+    for (let c = 0; c < 9; c++) {
+      let x = 30 + off + c * 20, w = 20;
+      if (x < 30) { w = 10; x = 30; } if (x + w > 190) w = 190 - x; if (w <= 0) continue;
+      h += `<rect class="b" ${t(n++)} x="${x}" y="${y}" width="${w}" height="12" rx="1.5" fill="${['#d9694a','#c9573b','#e07a5a'][(r + c) % 3]}" stroke="#14304f" stroke-width="1.5"/>`;
+    }
+  }
+  h += `<path class="b" ${t(n++)} d="M16 68 L110 14 L204 68 Z" fill="#1d63c9" stroke="#14304f" stroke-width="3" stroke-linejoin="round"/>`;
+  h += `<rect class="b" ${t(n++)} x="96" y="134" width="28" height="40" rx="3" fill="#f2c14e" stroke="#14304f" stroke-width="2"/><circle class="b" ${t(n)} cx="118" cy="156" r="2" fill="#14304f"/>`;
+  [[46, 104], [146, 104]].forEach(([x, y]) => h += `<g class="b" ${t(n + 1)}><rect x="${x}" y="${y}" width="28" height="24" rx="2" fill="#bfe3ff" stroke="#14304f" stroke-width="2"/><path d="M${x + 14} ${y}v24M${x} ${y + 12}h28" stroke="#14304f" stroke-width="1.5"/></g>`);
+  h += [0, 1, 2].map(i => `<circle class="sm" style="animation-delay:${i}s" cx="157" cy="30" r="6" fill="#9fb2c4"/>`).join('');
+  $('brick').innerHTML = h;
+})();
 
 /* ---- light / dark theme ---- */
 const root = document.documentElement;

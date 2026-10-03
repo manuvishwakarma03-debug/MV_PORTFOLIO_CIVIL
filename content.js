@@ -15,9 +15,9 @@ const PROFILE = {
   "name": "Manu Vishwakarma",
   "role": "Civil Engineer | Construction Technology & Management",
   "university": "RGPV Bhopal",
-  "year": "M.Tech (pursuing)",
+  "year": "M.Tech",
   "location": "Bhopal, Madhya Pradesh",
-  "lead": "Civil engineer with hands-on site execution experience, now pursuing an M.Tech in Construction Technology & Management. I draw and model in AutoCAD, Revit, Tekla and Navisworks.",
+  "lead": "Civil engineer with hands-on site execution experience, studying an M.Tech in Construction Technology & Management. I draw and model in AutoCAD, Revit, Tekla and Navisworks.",
   "bio": "I am a detail-oriented civil engineer with experience in site execution, structural analysis and project coordination. I focus on quality control, safety compliance and efficient project delivery, and I enjoy using engineering and data-driven decision-making to improve construction processes. I am especially interested in sustainable construction and BIM workflows. My published research looks at soil stabilization using waste fibres and crushed tyre rubber.",
   "software": [
     "AutoCAD 2D & 3D",
@@ -65,7 +65,7 @@ const PROFILE = {
     {
       "degree": "M.Tech, Construction Technology & Management",
       "school": "RGPV Bhopal",
-      "year": "Pursuing (2024)",
+      "year": "2024",
       "score": "CGPA 8.1 (1st year)"
     },
     {
@@ -113,6 +113,10 @@ const PROFILE = {
 
 /* One entry per drawing. Newest first. */
 const PROJECTS = [
+  { "img": "assets/works/revit-isometric-rooftop.jpg", "title": "Four-Storey Building: Isometric View", "cat": "BIM & Revit", "tool": "Revit", "desc": "Revit isometric model of a four-storey building with a flat roof terrace, perimeter railing, projecting slabs and a rooftop stair room. Levels are marked every 10 ft up to Level 5 at 50'-0\"." },
+  { "img": "assets/works/revit-perspective-view.jpg", "title": "Four-Storey Building: Perspective View", "cat": "BIM & Revit", "tool": "Revit", "desc": "Perspective view of the same Revit model showing balconies with railings, timber doors, sliding and fixed windows and the rooftop stair room." },
+  { "img": "assets/works/revit-side-elevation-balconies.jpg", "title": "Side Elevation: Balconies & Doors", "cat": "BIM & Revit", "tool": "Revit", "desc": "Side elevation with balconies, railings, timber doors and block-wall panels. Level 2 is at 20'-0\" and Level 3 at 30'-0\"." },
+  { "img": "assets/works/revit-side-elevation-wall-finishes.jpg", "title": "Side Elevation: Wall Finishes & Windows", "cat": "BIM & Revit", "tool": "Revit", "desc": "Side elevation showing three wall finishes (dark panel, block masonry and white plaster), balcony railings and window openings on each floor." },
   { "img": "assets/works/slotted-circular-plate.jpg", "title": "Slotted Circular Plate", "cat": "2D Drafting", "tool": "AutoCAD", "desc": "A circular plate with four cross-shaped cut-outs and four curved slots on a bolt circle. Dimensioned with diameters of 200, 160, 120, 48 and 16 mm and a 35° angle." },
   { "img": "assets/works/teapot-profile.jpg", "title": "Teapot Profile with Fillets", "cat": "2D Drafting", "tool": "AutoCAD", "desc": "Side profile of a teapot built from lines, arcs and fillets (R1 to R20). The body is 40 wide on a 45 wide base and 40 tall, with a handle and an angled spout." },
   { "img": "assets/works/ornamental-oval-motif.jpg", "title": "Ornamental Oval Motif & Plates", "cat": "2D Drafting", "tool": "AutoCAD", "desc": "A decorative oval frame with star details, a small rosette made with polar arrays (R10 and R20), and a plate with a rounded notch and a circular hole." },
