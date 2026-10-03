@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manu Vishwakarma | Civil Engineering Portfolio</title>
+<meta name="description" content="Manu Vishwakarma, civil engineer (M.Tech Construction Technology & Management). Building plans, structural drawings, architectural details and 3D drafting.">
+<meta property="og:title" content="Manu Vishwakarma | Civil Engineering Portfolio">
+<meta property="og:description" content="Civil engineer: drawings, BIM and construction experience.">
+<meta property="og:image" content="assets/works/residential-plans-section.jpg">
+<meta name="theme-color" content="#14304f">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%2314304f'/><path d='M6 24V12l10-6 10 6v12M12 24v-8h8v8' fill='none' stroke='white' stroke-width='2'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f2f5f7;--card:#fff;--ink:#14304f;--mute:#4f6378;--line:#c5d1dc;--accent:#1d63c9;--onaccent:#fff;
+--head:'Barlow Condensed','Arial Narrow',Arial,sans-serif;--body:'Source Sans 3',system-ui,-apple-system,'Segoe UI',sans-serif;box-sizing:border-box}
+:root[data-theme=dark]{--paper:#0f2b49;--card:#fff;--ink:#e8f0f8;--mute:#a9bdd1;--line:#37577a;--accent:#7cc0ff;--onaccent:#0f2b49}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--head);line-height:1.05;margin:0;font-weight:700}
+nav{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:20px;height:56px}
+nav b{font:700 22px var(--head);margin-right:auto}
+nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:16px}
+nav a:hover{color:var(--accent)}
+.icon-btn{background:none;border:1px solid var(--line);color:var(--ink);border-radius:6px;height:34px;padding:0 10px;cursor:pointer;font:600 14px var(--body)}
+.icon-btn:hover{border-color:var(--accent)}
+/* hero: drawing title block */
+.hero{padding:56px 0 40px}
+.hero h1{font-size:clamp(48px,9vw,104px);letter-spacing:-.01em}
+.hero p.lead{max-width:60ch;color:var(--mute);margin:18px 0 28px;font-size:20px}
+.tb{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));border:2px solid var(--ink);background:var(--card);color:#14304f}
+.tb div{padding:10px 14px;border-right:1px solid #9fb2c4;border-bottom:1px solid #9fb2c4;min-height:68px}
+.tb small{display:block;color:#4f6378;font-size:13px}
+.tb strong{font:600 22px/1.15 var(--head)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-block;padding:10px 22px;border-radius:6px;background:var(--accent);color:var(--onaccent);font-weight:600;text-decoration:none;border:2px solid var(--accent)}
+.btn.alt{background:none;color:var(--ink);border-color:var(--ink)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(34px,5vw,52px);margin-bottom:8px}
+.sub{color:var(--mute);margin:0 0 24px;max-width:62ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.chip{border:1px solid var(--line);background:none;color:var(--ink);padding:6px 16px;border-radius:99px;cursor:pointer;font:600 15px var(--body)}
+.chip[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:var(--onaccent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px}
+.card{background:none;border:0;padding:0;text-align:left;cursor:pointer;color:inherit;font:inherit}
+.thumb{background:var(--card);border:1px solid var(--line);aspect-ratio:3/4;display:flex;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:contain;transition:transform .25s}
+.card:hover .thumb img{transform:scale(1.04)}
+.card h3{font-size:23px;margin:12px 0 2px}
+.card span{color:var(--mute);font-size:15px}
+.empty{color:var(--mute)}
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+.skills{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.skills li{border:1px solid var(--line);padding:4px 14px;border-radius:4px;font-weight:600;font-size:16px}
+.links{display:flex;flex-wrap:wrap;gap:12px 28px;font-size:20px}
+footer{padding:28px 0;color:var(--mute);font-size:15px;border-top:1px solid var(--line)}
+
+/* editor (?edit) */
+#ed{position:fixed;top:0;right:0;bottom:0;width:min(400px,100%);background:#fff;color:#14304f;z-index:40;display:flex;flex-direction:column;box-shadow:-4px 0 24px rgba(0,0,0,.25);font-size:15px;line-height:1.4}
+#ed[hidden]{display:none}
+#ed.min{top:auto;height:52px;width:180px}
+#ed.min #edBody,#ed.min .edfoot{display:none}
+body.editing{padding-right:min(400px,0px)}
+.edtop{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-bottom:1px solid #c5d1dc}
+#edBody{flex:1;overflow:auto;padding:4px 14px 14px}
+#ed h3{font-size:24px;margin:16px 0 6px}
+#ed label{display:block;font-weight:600;margin:8px 0;font-size:14px}
+#ed input:not([type=file]),#ed textarea{display:block;width:100%;margin-top:3px;padding:7px 9px;border:1px solid #9fb2c4;border-radius:5px;font:400 15px var(--body);color:#14304f;background:#fff}
+#ed fieldset{border:1px solid #c5d1dc;border-radius:6px;margin:12px 0;padding:4px 12px 10px}
+#ed legend{font-weight:600;padding:0 6px}
+#ed button,.addbtn{border:1px solid #14304f;background:#fff;color:#14304f;border-radius:5px;padding:6px 12px;cursor:pointer;font:600 14px var(--body)}
+#ed button.primary,.addbtn{background:#1d63c9;border-color:#1d63c9;color:#fff}
+.addbtn{display:inline-block!important;font-size:15px!important;margin:6px 0 10px!important}
+#ed .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.edfoot{border-top:1px solid #c5d1dc;padding:10px 14px}
+.edfoot textarea{margin-top:8px;font:12px monospace!important}
+.hint{color:#4f6378;margin:6px 0;font-size:14px}
+@media(max-width:760px){#ed{top:auto;height:70%}#ed.min{height:52px}}
+.h3{font-size:28px;margin-bottom:12px}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{border-left:3px solid var(--accent);padding:2px 0 2px 16px;margin-bottom:18px}
+.tl b{font:700 22px/1.2 var(--head);display:block}
+.tl small{display:block;color:var(--mute);font-size:15px}
+.tl p{margin:4px 0 0;font-size:16px}
+/* lightbox */
+#lb{position:fixed;inset:0;background:rgba(6,18,32,.94);z-index:50;display:none;flex-direction:column}
+#lb.open{display:flex}
+.lbbar{display:flex;align-items:center;gap:10px;padding:10px 16px;color:#fff}
+.lbbar div{margin-right:auto}
+.lbbar h3{font-size:24px}
+.lbbar p{margin:0;font-size:15px;color:#c3d3e3;max-width:70ch}#lbD{color:#fff;margin-top:2px}
+.lbbar button,.lbbar a{background:#fff;color:#14304f;border:0;border-radius:6px;height:36px;min-width:36px;padding:0 12px;cursor:pointer;font:600 15px var(--body);text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
+.stage{flex:1;overflow:auto;display:flex;padding:0 16px 16px;min-height:0}
+.stage img{margin:auto;background:#fff;max-width:100%;max-height:100%;cursor:zoom-in}
+.stage.zoom img{max-width:none;max-height:none;width:200%;cursor:zoom-out}
+@media(max-width:760px){.about{grid-template-columns:1fr}nav a.hide{display:none}.stage.zoom img{width:260%}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <b id="navName">Portfolio</b>
+  <a href="#works" class="hide">Works</a><a href="#experience" class="hide">Experience</a><a href="#about" class="hide">About</a><a href="#contact">Contact</a>
+  <button class="icon-btn" id="themeBtn" aria-label="Toggle light and dark theme">Dark</button>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <h1 id="heroName"></h1>
+  <p class="lead" id="heroLead"></p>
+  <div class="tb" id="titleBlock" aria-label="Summary"></div>
+  <div class="btns"><a class="btn" href="#works">View drawings</a><a class="btn alt" href="#contact">Get in touch</a></div>
+</div></header>
+
+<main>
+<section id="works"><div class="wrap">
+  <h2>Selected works</h2>
+  <p class="sub">Select a sheet to open it full size. Click the drawing to zoom in.</p>
+  <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <h2>Experience &amp; education</h2>
+  <div class="about">
+    <div><h3 class="h3">Experience</h3><ul class="tl" id="exp"></ul>
+         <h3 class="h3" style="margin-top:28px">Published research</h3><ul class="tl" id="pubs"></ul></div>
+    <div><h3 class="h3">Education</h3><ul class="tl" id="edu"></ul></div>
+  </div>
+</div></section>
+
+<section id="about"><div class="wrap about">
+  <div><h2>About</h2><p id="bio" class="sub"></p></div>
+  <div><h3 class="h3">Software</h3><ul class="skills" id="soft"></ul><h3 class="h3" style="margin-top:24px">Skills</h3><ul class="skills" id="skills"></ul></div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <h2>Contact</h2>
+  <p class="sub">Get in touch about site engineering, construction management or BIM work.</p>
+  <div class="links" id="links"></div>
+</div></section>
+</main>
+
+<footer><div class="wrap" id="foot"></div></footer>
+
+<aside id="ed" hidden aria-label="Site editor">
+  <div class="edtop"><b>Site editor</b><button id="edHide">Hide editor</button></div>
+  <div id="edBody"></div>
+  <div class="edfoot">
+    <p class="hint">1. Click Download. 2. Upload the file to GitHub, replacing <b>content.js</b>.</p>
+    <div class="row"><button id="edDl" class="primary">Download content.js</button><button id="edCp">Copy text</button></div>
+    <textarea id="edOut" rows="3" readonly aria-label="Generated content.js"></textarea>
+  </div>
+</aside>
+<div id="lb" role="dialog" aria-modal="true" aria-label="Drawing viewer">
+  <div class="lbbar">
+    <div><h3 id="lbT"></h3><p id="lbM"></p><p id="lbD"></p></div>
+    <button id="lbPrev" aria-label="Previous drawing">Prev</button>
+    <button id="lbNext" aria-label="Next drawing">Next</button>
+    <a id="lbDl" download>Download</a>
+    <button id="lbX" aria-label="Close">Close</button>
+  </div>
+  <div class="stage" id="stage"><img id="lbImg" alt=""></div>
+</div>
+
+<script src="content.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+const esc = t => String(t ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const P = PROFILE;
+let filter = "All", shown = [];
+
+/* ---- build the whole page from content.js ---- */
+function renderSite() {
+  document.title = `${P.name} | Civil Engineering Portfolio`;
+  $('navName').textContent = P.name; $('heroName').textContent = P.name;
+  $('heroLead').textContent = P.lead; $('bio').textContent = P.bio;
+  $('skills').innerHTML = P.skills.map(s => `<li>${esc(s)}</li>`).join('');
+  $('soft').innerHTML = (P.software || []).map(s => `<li>${esc(s)}</li>`).join('');
+  $('exp').innerHTML = (P.experience || []).map(x => `<li><b>${esc(x.role)}</b><small>${esc(x.org)} · ${esc(x.dates)}</small><p>${esc(x.desc)}</p></li>`).join('');
+  $('edu').innerHTML = (P.education || []).map(x => `<li><b>${esc(x.degree)}</b><small>${esc(x.school)} · ${esc(x.year)}${x.score ? ' · ' + esc(x.score) : ''}</small></li>`).join('');
+  $('pubs').innerHTML = (P.publications || []).map(x => `<li><b>${esc(x.title)}</b><small>${esc(x.venue)}</small></li>`).join('');
+  $('foot').textContent = `© ${new Date().getFullYear()} ${P.name}. All drawings are my own work.`;
+  const cats = [...new Set(PROJECTS.map(p => p.cat).filter(Boolean))];
+  const sw = P.software || [];
+  const tools = sw.length > 3 ? [...sw.slice(0, 3), "+" + (sw.length - 3) + " more"] : sw;
+  const tb = [["Name", P.name], ["Discipline", P.role], ["Institution", P.university + (P.year ? ", " + P.year : "")],
+              ["Sheets", PROJECTS.length + " drawings"], ["Software", tools.join(", ") || "-"]];
+  $('titleBlock').innerHTML = tb.map(([k, v]) => `<div><small>${k}</small><strong>${esc(v)}</strong></div>`).join('');
+  const L = [];
+  if (P.email) L.push(`<a href="mailto:${esc(P.email)}">${esc(P.email)}</a>`);
+  if (P.phone) L.push(`<a href="tel:${esc(P.phone)}">${esc(P.phone)}</a>`);
+  if (P.location) L.push(`<span>${esc(P.location)}</span>`);
+  P.links.forEach(l => L.push(`<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`));
+  if (P.resume) L.push(`<a href="${esc(P.resume)}" target="_blank" rel="noopener">Resume (PDF)</a>`);
+  $('links').innerHTML = L.join('');
+  if (filter !== "All" && !cats.includes(filter)) filter = "All";
+  $('chips').innerHTML = ["All", ...cats].map(c => `<button class="chip" aria-pressed="${c === filter}" data-c="${esc(c)}">${esc(c)}</button>`).join('');
+  shown = PROJECTS.filter(p => filter === "All" || p.cat === filter);
+  $('grid').innerHTML = shown.length ? shown.map((p, i) =>
+    `<button class="card" data-i="${i}" aria-label="Open ${esc(p.title)}">
+       <div class="thumb"><img src="${esc(p._src || p.img)}" alt="${esc(p.title)}" loading="lazy"></div>
+       <h3>${esc(p.title)}</h3><span>${esc(p.cat)}${p.tool ? " · " + esc(p.tool) : ""}</span></button>`).join('')
+    : '<p class="empty">No drawings in this category yet.</p>';
+}
+$('chips').onclick = e => { const c = e.target.dataset.c; if (c) { filter = c; renderSite(); } };
+$('grid').onclick = e => { const b = e.target.closest('.card'); if (b) openLb(+b.dataset.i); };
+renderSite();
+
+/* ---- full-screen viewer ---- */
+let cur = 0, lastFocus;
+function show(i) {
+  cur = (i + shown.length) % shown.length;
+  const p = shown[cur];
+  $('lbImg').src = p._src || p.img; $('lbImg').alt = p.title;
+  $('lbT').textContent = p.title;
+  $('lbM').textContent = [p.cat, p.tool].filter(Boolean).join(" · ");
+  $('lbD').textContent = p.desc || "";
+  $('lbDl').href = p._src || p.img;
+  $('stage').classList.remove('zoom'); $('stage').scrollTo(0, 0);
+}
+function openLb(i) { lastFocus = document.activeElement; show(i); $('lb').classList.add('open'); document.body.style.overflow = 'hidden'; $('lbX').focus(); }
+function closeLb() { $('lb').classList.remove('open'); document.body.style.overflow = ''; lastFocus && lastFocus.focus(); }
+$('lbX').onclick = closeLb;
+$('lbPrev').onclick = () => show(cur - 1);
+$('lbNext').onclick = () => show(cur + 1);
+$('lbImg').onclick = () => $('stage').classList.toggle('zoom');
+document.addEventListener('keydown', e => {
+  if (!$('lb').classList.contains('open')) return;
+  if (e.key === 'Escape') closeLb();
+  if (e.key === 'ArrowLeft') show(cur - 1);
+  if (e.key === 'ArrowRight') show(cur + 1);
+});
+
+/* ---- light / dark theme ---- */
+const root = document.documentElement;
+function setTheme(t) { root.dataset.theme = t; $('themeBtn').textContent = t === 'dark' ? 'Light' : 'Dark'; try { localStorage.setItem('theme', t); } catch (e) {} }
+let saved; try { saved = localStorage.getItem('theme'); } catch (e) {}
+setTheme(saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+$('themeBtn').onclick = () => setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark');
+
+/* ---- visual editor: only appears when the address ends in ?edit ---- */
+if (new URLSearchParams(location.search).has('edit')) {
+  const ed = $('ed'); ed.hidden = false; document.body.classList.add('editing');
+  const inp = (label, path, val, rows) => `<label>${label}${rows
+    ? `<textarea rows="${rows}" data-k="${path}">${esc(val)}</textarea>`
+    : `<input data-k="${path}" value="${esc(val)}">`}</label>`;
+  function buildEditor() {
+    const cats = [...new Set(PROJECTS.map(p => p.cat))];
+    $('edBody').innerHTML = `
+      <h3>Your details</h3>
+      ${inp('Name', 'P.name', P.name)}${inp('Title (e.g. Civil Engineering Student)', 'P.role', P.role)}
+      ${inp('University', 'P.university', P.university)}${inp('Year (e.g. Year 3)', 'P.year', P.year)}
+      ${inp('One-line intro', 'P.lead', P.lead, 2)}${inp('About you', 'P.bio', P.bio, 5)}
+      ${inp('Software (separate with commas)', 'P.software', (P.software || []).join(', '))}
+      ${inp('Skills (separate with commas)', 'P.skills', P.skills.join(', '))}
+      ${inp('Experience (one per line: Role | Company | Dates | What you did)', 'P.experience', (P.experience || []).map(x => [x.role, x.org, x.dates, x.desc].join(' | ')).join('\n'), 6)}
+      ${inp('Education (one per line: Degree | Institution | Year | Score)', 'P.education', (P.education || []).map(x => [x.degree, x.school, x.year, x.score].join(' | ')).join('\n'), 6)}
+      ${inp('Published research (one per line: Title | Journal)', 'P.publications', (P.publications || []).map(x => x.title + ' | ' + x.venue).join('\n'), 3)}
+      ${inp('Phone', 'P.phone', P.phone || '')}${inp('Location', 'P.location', P.location || '')}
+      ${inp('Email', 'P.email', P.email)}
+      ${inp('Links (one per line: Label | https://address)', 'P.links', P.links.map(l => l.label + ' | ' + l.url).join('\n'), 3)}
+      ${inp('Resume file (e.g. assets/resume.pdf, or leave empty)', 'P.resume', P.resume)}
+      <h3>Drawings</h3>
+      <p class="hint">Add images below, then also upload the same image files to the <b>assets/works</b> folder on GitHub.</p>
+      <label class="addbtn">+ Add drawing images<input type="file" id="edFiles" accept="image/*" multiple hidden></label>
+      <datalist id="edCats">${cats.map(c => `<option value="${esc(c)}">`).join('')}</datalist>
+      ${PROJECTS.map((p, i) => `<fieldset><legend>${i + 1}. ${esc(p.title)}</legend>
+        ${inp('Title', `D.${i}.title`, p.title)}
+        <label>Category<input list="edCats" data-k="D.${i}.cat" value="${esc(p.cat)}"></label>
+        ${inp('Software', `D.${i}.tool`, p.tool)}${inp('Description', `D.${i}.desc`, p.desc, 3)}
+        ${inp('Image file path', `D.${i}.img`, p.img)}
+        <div class="row"><button data-m="up" data-i="${i}">Move up</button><button data-m="down" data-i="${i}">Move down</button><button data-m="del" data-i="${i}">Delete</button></div>
+      </fieldset>`).join('')}`;
+    out();
+  }
+  function out() {
+    const clean = PROJECTS.map(({ _src, ...r }) => r);
+    $('edOut').value = '/* Edit with ?edit on your website, or by hand. See README.md */\nconst PROFILE = ' + JSON.stringify(P, null, 2) + ';\n\nconst PROJECTS = ' + JSON.stringify(clean, null, 2) + ';\n';
+  }
+  $('edBody').addEventListener('input', e => {
+    const k = e.target.dataset.k; if (!k) return; const v = e.target.value;
+    if (k.startsWith('D.')) { const [, i, f] = k.split('.'); PROJECTS[i][f] = v; if (f === 'img') delete PROJECTS[i]._src; }
+    else {
+      const f = k.slice(2);
+      const rows = v => v.split('\n').map(l => l.split('|').map(t => t.trim())).filter(a => a[0]);
+      if (f === 'skills' || f === 'software') P[f] = v.split(',').map(s => s.trim()).filter(Boolean);
+      else if (f === 'experience') P.experience = rows(v).map(a => ({ role: a[0], org: a[1] || '', dates: a[2] || '', desc: a[3] || '' }));
+      else if (f === 'education') P.education = rows(v).map(a => ({ degree: a[0], school: a[1] || '', year: a[2] || '', score: a[3] || '' }));
+      else if (f === 'publications') P.publications = rows(v).map(a => ({ title: a[0], venue: a[1] || '' }));
+      else if (f === 'links') P.links = v.split('\n').map(l => l.split('|').map(s => s.trim())).filter(a => a[0] && a[1]).map(a => ({ label: a[0], url: a[1] }));
+      else P[f] = v;
+    }
+    renderSite(); out();
+  });
+  $('edBody').addEventListener('click', e => {
+    const m = e.target.dataset.m; if (!m) return; const i = +e.target.dataset.i;
+    if (m === 'del' && confirm('Delete this drawing from the list?')) PROJECTS.splice(i, 1);
+    if (m === 'up' && i > 0) [PROJECTS[i - 1], PROJECTS[i]] = [PROJECTS[i], PROJECTS[i - 1]];
+    if (m === 'down' && i < PROJECTS.length - 1) [PROJECTS[i + 1], PROJECTS[i]] = [PROJECTS[i], PROJECTS[i + 1]];
+    renderSite(); buildEditor();
+  });
+  $('edBody').addEventListener('change', e => {
+    if (e.target.id !== 'edFiles') return;
+    [...e.target.files].reverse().forEach(f => PROJECTS.unshift({
+      img: 'assets/works/' + f.name, _src: URL.createObjectURL(f),
+      title: f.name.replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ').replace(/^./, c => c.toUpperCase()),
+      cat: 'Other', tool: 'AutoCAD', desc: 'Add a short description here.' }));
+    renderSite(); buildEditor();
+  });
+  $('edDl').onclick = () => { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([$('edOut').value], { type: 'text/javascript' })); a.download = 'content.js'; a.click(); };
+  $('edCp').onclick = () => { $('edOut').select(); navigator.clipboard ? navigator.clipboard.writeText($('edOut').value) : document.execCommand('copy'); $('edCp').textContent = 'Copied'; setTimeout(() => $('edCp').textContent = 'Copy text', 1500); };
+  $('edHide').onclick = () => { ed.classList.toggle('min'); $('edHide').textContent = ed.classList.contains('min') ? 'Show editor' : 'Hide editor'; };
+  buildEditor();
+}
+</script>
+</body>
+</html>
